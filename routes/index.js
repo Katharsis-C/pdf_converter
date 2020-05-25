@@ -55,9 +55,9 @@ router.post('/pdf', upload.single('file'), async (ctx, next) => {
             // console.log(str)
         })
     } catch (error) {
-        console.log(error)
         ctx.response.body = {
-            msg: 'error',
+            code: error.code,
+            msg: error.message,
         }
     }
 })
