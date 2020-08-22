@@ -5,3 +5,11 @@ Content-Type: application/json
 {
     "test": "test"
 }
+
+###
+GET  http://127.0.0.1:3000/pdf
+
+Content-Type: application/json
+
+{
+}

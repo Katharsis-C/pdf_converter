@@ -56,14 +56,17 @@ router.post('/pdf', upload.single('file'), async (ctx, next) => {
         })
     } catch (error) {
         ctx.response.body = {
-            code: error.code,
+            code: -1,
             msg: error.message,
         }
     }
 })
 
 router.get('/pdf', async (ctx, next) => {
-    await ctx.render('index', {})
+  ctx.response.body = {
+    code: 200,
+    msg: 'test'
+  }
 })
 
 module.exports = router
