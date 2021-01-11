@@ -35,7 +35,7 @@ async function PDF_convert(path = '', password = null) {
       }
     })
 
-  console.log(28, { str, data, pw:options.password })
+  // console.log(28, { str, data, pw:options.password })
   return str
 }
 
@@ -43,4 +43,4 @@ async function PDF_convert(path = '', password = null) {
 // PDF_convert(`C:\\Users\\Saki\\Downloads\\2.pdf`, '5316DN92')
 // PDF_convert(`C:\\Users\\Saki\\Downloads\\2.pdf`, '')
 
-PDF_convert(`E:\\Desktop\\2.pdf`, '5316DN92')
+// PDF_convert(`E:\\Desktop\\2.pdf`, '5316DN92')
