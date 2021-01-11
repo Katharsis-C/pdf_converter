@@ -13,7 +13,7 @@ async function PDF_convert(path = '', password = null) {
   }
 
   let options = { disableCombineTextItems: true }
-  let str = []
+  let str = ``
 
   if (!!password) {
     Object.assign(options, { password: password })
@@ -24,7 +24,7 @@ async function PDF_convert(path = '', password = null) {
     .then((data) => {
       for (const pages of data.pages) {
         for (const content of pages.content) {
-          str.push(content.str)
+          str += `${content.str}\n`
         }
       }
       return data
@@ -42,3 +42,5 @@ async function PDF_convert(path = '', password = null) {
 // PDF_convert(`C:\\Users\\Saki\\Downloads\\1.pdf`, '')
 // PDF_convert(`C:\\Users\\Saki\\Downloads\\2.pdf`, '5316DN92')
 // PDF_convert(`C:\\Users\\Saki\\Downloads\\2.pdf`, '')
+
+PDF_convert(`E:\\Desktop\\2.pdf`, '5316DN92')
